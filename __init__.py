@@ -102,6 +102,13 @@ def modified_load_new_note(self, sticky_fields_from = None) -> None:
         # and tags
         note.tags = old_note.tags
     self.setAndFocusNote(note)
-
+def setupButtons(buttons, editor): 
+    [...]
+    btn = editor.addButton(os.path.join(os.path.dirname(__file__), "banana.svg"),
+                         'foo',
+                         your_function,
+                         tip='hover etxt')
+    buttons.append(btn)
 
 AddCards._load_new_note = modified_load_new_note
+gui_hooks.editor_did_init_buttons.append(setupButtons)
