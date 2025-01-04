@@ -1,5 +1,7 @@
 from aqt.addcards import AddCards
+from aqt import gui_hooks
 import re
+import os
 
 # def remove_colons(s:str):
 #     reversed_s = s[::-1]
